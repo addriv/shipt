@@ -10,4 +10,6 @@
 #
 
 class Order < ApplicationRecord
+  validates :customer_id, :status, presence: true
+  validates :status, inclusion: {in: ["waiting for delivery", "on its way", "delivered"]}
 end
