@@ -6,5 +6,7 @@ class CreateOrderProducts < ActiveRecord::Migration[5.1]
       t.decimal :order_count, null: false
       t.timestamps
     end
+
+    add_index :order_products, [:order_id, :product_id], unique: true
   end
 end
