@@ -16,7 +16,11 @@ class Order < ApplicationRecord
   belongs_to :customer
   has_many :order_products
   has_many :products, through: :order_products, source: :product
-  def self.shipt_query
-    ActiveRecord::Base.connection.execute(ShiptSQL.customer_category_purchases)
+
+  def self.customer_category_purchases
+    ActiveRecord::Base.connection.execute(OrdersSQL.customer_category_purchases)
   end
+
+  def self.find_by_date(start_date, end_date, range)
+  end 
 end

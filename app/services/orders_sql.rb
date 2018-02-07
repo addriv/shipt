@@ -1,4 +1,4 @@
-class ShiptSQL
+class OrdersSQL
   def self.customer_category_purchases
     # customer_id customer_first_name category_id category_name number_purchased
     "
