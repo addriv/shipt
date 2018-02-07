@@ -32,7 +32,8 @@
 | column name       | data type | details                            |
 |:------------------|:---------:|:-----------------------------------|
 | `id`              | integer   | not null, primary key              |  
-| `name`            | string    | not null                           |
+| `first_name`      | string    | not null                           |
+| `last_name`       | string    | not null                           |
 
 ### `orders`
 | column name       | data type | details                            |
