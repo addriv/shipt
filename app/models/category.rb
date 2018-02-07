@@ -10,4 +10,7 @@
 
 class Category < ApplicationRecord
   validates :name, presence: true
+
+  has_many :product_categories, class_name: :ProductCategory
+  has_many :products, through: :product_categories, source: :product
 end
