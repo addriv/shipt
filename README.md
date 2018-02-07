@@ -4,6 +4,7 @@ This project was implemented using Ruby on Rails and PostgreSQL.
 To setup locally, run `bundle install` and `rails db:setup`.
 Start the rails server using command `rails server`
 
+* Future Development: With more time, a frontend UI can be created to help display data and create new records.
 
 1. A product belongs to many categories. A category has many products. A product can be sold in decimal amounts (such as weights).
 
