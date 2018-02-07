@@ -1,10 +1,10 @@
 class ShiptSQL
-  def customer_category_purchases
+  def self.customer_category_purchases
     "
       SELECT
         cs.id AS customer_id,
         cs.first_name AS customer_first_name,
-        ct.category_id,
+        ct.id AS category_id,
         ct.name AS category_name,
         SUM(op.quantity) AS number_purchased
       FROM
@@ -26,7 +26,16 @@ class ShiptSQL
       ON 
         pc.category_id = ct.id
       GROUP BY
-        cs.id, cs.first_name, ct.category_id, ct.name
+        cs.id, cs.first_name, ct.id, ct.name
+    "
+  end
+
+  def self.test
+    "
+      SELECT
+        *
+      FROM
+        customers
     "
   end
 end
