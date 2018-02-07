@@ -20,7 +20,4 @@ class Order < ApplicationRecord
   def self.customer_category_purchases
     ActiveRecord::Base.connection.execute(OrdersSQL.customer_category_purchases)
   end
-
-  def self.find_by_date(start_date, end_date, range)
-  end 
 end

@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
-  def by_date_range
-    start_date = Time.parse(params[:start_date])
-    end_date = Time.parse(params[:start_date])
+  def sold_by_date_range
+    start_date = params[:start_date]
+    end_date = params[:start_date]
     interval = params[:interval]
-    
+
+    @sales = Product.sold_by_date_range(start_date, end_date, interval)
   end
 end
