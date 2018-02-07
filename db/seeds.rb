@@ -64,6 +64,7 @@ end
   product_ids = []
   num_items.times do 
     product_id = rand(1..9) while product_ids.include?(product_id)
+    product_ids << product_id
     OrderProduct.create(
       order_id: order_id,
       product_id: product_id,

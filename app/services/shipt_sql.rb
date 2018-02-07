@@ -1,5 +1,6 @@
 class ShiptSQL
   def self.customer_category_purchases
+    # customer_id customer_first_name category_id category_name number_purchased
     "
       SELECT
         cs.id AS customer_id,
@@ -33,9 +34,20 @@ class ShiptSQL
   def self.test
     "
       SELECT
-        *
+        cs.id AS customer_id,
+        cs.first_name AS customer_first_name,
+        o.id AS order_id,
+        op.product_id
       FROM
-        customers
+        customers cs
+      INNER JOIN
+        orders o
+      ON
+        cs.id = o.customer_id
+      INNER JOIN
+        order_products op
+      ON 
+        o.id = op.order_id
     "
   end
 end
