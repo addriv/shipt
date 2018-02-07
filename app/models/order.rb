@@ -19,8 +19,4 @@ class Order < ApplicationRecord
   def self.shipt_query
     ActiveRecord::Base.connection.execute(ShiptSQL.customer_category_purchases)
   end
-
-  def self.test
-    ActiveRecord::Base.connection.execute(ShiptSQL.test)
-  end
 end
