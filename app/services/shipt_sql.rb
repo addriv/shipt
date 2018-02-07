@@ -6,7 +6,7 @@ class ShiptSQL
         cs.first_name AS customer_first_name,
         ct.category_id,
         ct.name AS category_name,
-        SUM(op.order_count) AS number_purchased
+        SUM(op.quantity) AS number_purchased
       FROM
         customers cs
       INNER JOIN

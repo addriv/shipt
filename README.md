@@ -51,7 +51,7 @@
 | `id`              | integer   | not null, primary key              |
 | `order_id`        | integer   | not null, indexed, foreign key     |
 | `product_id`      | integer   | not null, indexed, foreign key     |
-| `order_count`     | decimal   | not null                           |
+| `quantity`        | decimal   | not null                           |
 
 + `customer_id` references `customers`
 + `product_id` references `products`
