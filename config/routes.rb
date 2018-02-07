@@ -12,4 +12,6 @@ Rails.application.routes.draw do
       get 'sold_by_date_range'
     end
   end
+
+  resources :customers, defaults: { format: :json }, only: [:show]
 end
