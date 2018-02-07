@@ -5,11 +5,6 @@
 |:------------------|:---------:|:-----------------------------------|
 | `id`              | integer   | not null, primary key              |
 | `name`            | string    | not null                           |
-| `category_id`     | integer   | not null, indexed                  |
-
-+ `category_id` references `categories`  
-+ `team_id` references `teams`
-+ index on `:category_id`
 
 ### `categories`
 | column name       | data type | details                            |

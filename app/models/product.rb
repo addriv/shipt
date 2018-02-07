@@ -10,5 +10,5 @@
 #
 
 class Product < ApplicationRecord
-  validates :name, :category_id, presence: true
+  validates :name, presence: true
 end

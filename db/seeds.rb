@@ -8,29 +8,28 @@
 
 require 'faker'
 
-# users
-3.times do |n|
-  Customer.create(first_name: Faker::Name.unique.first_name,
-              last_name: Faker::Name.unique.last_name)
+statuses = ["waiting for delivery", "on its way", "delivered"]
+
+# Customers
+10.times do
+  Customer.create(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name
+  )
 end 
 
-# Order
-Order.create(
-  customer_id: 1
-)
+# Orders
+20.times do
+  Order.create(
+    customer_id: rand(1..10),
+    status: statuses[rand(2)]
+  )
+end
 
-Order.create(
-  customer_id: 2
-)
-
-Order.create(
-  customer_id: 1
-)
-
-# Category
-Category.create(name: 'snacks')
+# Categories
+Category.create(name: 'beverages')
 Category.create(name: 'chips')
-Category.create(name: 'crackers')
+Category.create(name: 'utensils')
 
 # Product weight in oz
 # Product 1
